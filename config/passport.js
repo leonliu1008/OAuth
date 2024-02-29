@@ -5,7 +5,7 @@ const User = require("../models/user-model");
 passport.serializeUser((user, done) => {
   //user = 下面讀到資料庫的user
   console.log("serialize使用者...");
-  console.log(user);
+  // console.log(user);
   done(null, user.id); //將mongoDB的id,存在session
   // 並且將id簽名後,以cookie的形式給使用者
 });
