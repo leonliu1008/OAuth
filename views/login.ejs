@@ -27,6 +27,7 @@
       <hr />
       <h5>已經註冊過一個帳戶？您可以在此登錄：</h5>
       <form action="/auth/login" method="POST">
+        <%- include ("partials/message") %>
         <div class="form-group">
           <label for="exampleInputEmail1">信箱地址：</label>
           <input

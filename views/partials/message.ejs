@@ -8,6 +8,8 @@
 <% if (error_msg != "") { %>
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong><%= error_msg %></strong>
+  <br />
+  <strong>就跟你說密碼太短了</strong>
 </div>
 <% } %>
 
@@ -15,5 +17,7 @@
 <% if (success_msg != "") { %>
 <div class="alert alert-success alert-dismissible fade show" role="alert">
   <strong><%= success_msg %></strong>
+  <br />
+  <strong>我的DB也增加容量了</strong>
 </div>
 <% } %>
