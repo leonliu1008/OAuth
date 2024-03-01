@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const authRoutes = require("./routes/auth-routes");
+const profileRoutes = require("./routes/profile-routes");
 require("./config/passport");
 const session = require("express-session");
 const passport = require("passport");
@@ -34,6 +35,7 @@ app.use(passport.session());
 
 // routes
 app.use("/auth", authRoutes);
+app.use("/profile", profileRoutes);
 
 app.get("/", (req, res) => {
   return res.render("index");
