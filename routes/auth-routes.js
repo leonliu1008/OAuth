@@ -30,7 +30,10 @@ router.get(
   passport.authenticate("google", {
     scope: ["profile", "email"],
     prompt: "select_account",
-  })
+  }),
+  () => {
+    console.log("進入google");
+  }
 );
 
 router.post("/signup", async (req, res) => {
